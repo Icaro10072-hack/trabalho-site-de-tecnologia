@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechPulse | Portal de Notícias Tecnológicas</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Barra Superior do Portal (Top Bar) -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="date-info" id="currentDate">Segunda-feira, 1 de Setembro de 2026</div>
+      <div class="top-links">
+        <span class="trending-label">Em alta:</span>
+        <a href="#IA">IA Generativa</a>
+        <a href="#tecnologia">Robótica</a>
+        <a href="#noticias">Mercado de Trabalho</a>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <span class="logo-main">Infotech</span>
+        <span class="logo-sub">Jornalismo Tech</span>
+      </a>
+      
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#noticias">IA</a></li>
+          <li><a href="#noticias">Tecnologia</a></li>
+          <li><a href="#noticias">Últimas Reportagens</a></li>
+          <li><a href="#programação">Programação</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="controls">
+        <button class="theme-toggle" id="themeToggle">Modo Claro</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner de Notícias Urgentes (Ticker) -->
+  <div class="ticker-wrap">
+    <div class="container ticker-container">
+      <span class="ticker-badge">URGENTE</span>
+      <div class="ticker-text">
+        <span>Avanços em IA revolucionam mercado global de saúde</span> &bull; 
+        <span>China amplia frota de robôs para indústria</span> &bull; 
+        <span>Vagas em tech crescem no Norte e Nordeste</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+    
+    <!-- Seção de Capa / Manchete Principal -->
+    <section class="hero" id="inicio">
+      <div class="hero-grid">
+        <article class="featured-main">
+          <div class="img-container">
+            <img src="IA.png" alt="Inteligência Artificial">
+            <span class="tag tag-overlay">IA & Atendimento</span>
+          </div>
+          <div class="featured-content">
+            <div class="meta-info">Por Redação Infotech &bull; Publicado às 08:00</div>
+            <h1>Como os chatbots de IA estão transformando o atendimento ao cliente</h1>
+            <p class="lead">A inteligência artificial está transformando radicalmente o atendimento no Brasil através de chatbots modernos baseados em linguagem natural e automação contínua.</p>
+            <button class="btn read-more-btn" 
+                    data-title="Como os chatbots de IA estão transformando o atendimento ao cliente" 
+                    data-tag="IA & Atendimento" 
+                    data-content="A inteligência artificial está transformando radicalmente a forma como as empresas interagem com seus clientes no Brasil.
+
+Com o avanço do processamento de linguagem natural e do aprendizado de máquina, os chatbots modernos deixaram de ser simples menus de opções rígidos e passaram a oferecer atendimentos personalizados e fluidos em tempo real.
+
+No setor de saúde, por exemplo, eles auxiliam na triagem de sintomas e agendamento de consultas. Além da disponibilidade 24/7, essa tecnologia gera redução de custos e otimização das equipes humanas para tarefas estratégicas.">
+              Ler Matéria Completa &rarr;
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Layout Estilo Portal de Notícias (Conteúdo Principal + Barra Lateral) -->
+    <div class="main-portal-layout" id="noticias">
+      
+      <!-- Coluna Principal com Destaques e Grade de Notícias -->
+      <section class="main-content">
+        
+        <!-- BLOCO DESTAQUES DO DIA (Reposicionado aqui) -->
+        <div class="highlights-section">
+          <div class="sidebar-header">
+            <h3>Destaques do Dia</h3>
+          </div>
+
+          <div class="highlights-grid">
+            <article class="side-card">
+              <span class="tag">Inovação</span>
+              <h3>Computação Quântica</h3>
+              <p>Novos avanços em chips de silício prometem escalar a capacidade de processamento em larga escala.</p>
+              <div class="card-footer">
+                <span class="meta-time">Há 2 horas</span>
+                <button class="btn-text read-more-btn" 
+                        data-title="Computação Quântica" 
+                        data-tag="Inovação" 
+                        data-content="Novas pesquisas em semicondutores de silício viabilizam o dimensionamento de processadores quânticos em escala comercial.
+
+Esses avanços permitem simulações moleculares de alta velocidade, otimização de algoritmos criptográficos e uma nova etapa de experimentação científica em larga escala.">
+                  Ler mais
+                </button>
+              </div>
+            </article>
+
+            <article class="side-card">
+              <span class="tag">Programação</span>
+              <h3>TypeScript 6.0</h3>
+              <p>Confira as novidades na checagem de tipos e os ganhos de performance no compilador.</p>
+              <div class="card-footer">
+                <span class="meta-time">Há 4 horas</span>
+                <button class="btn-text read-more-btn" 
+                        data-title="TypeScript 6.0" 
+                        data-tag="Programação" 
+                        data-content="A versão 6.0 traz melhorias significativas na velocidade de compilação e no consumo de memória.
+
+A inferência de tipos se torna mais eficiente em ecossistemas de grande escala, o que ajuda equipes a manterem projetos mais robustos e produtivos sem sacrificar desempenho.">
+                  Ler mais
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <h2 class="section-title">Últimas Reportagens</h2>
+        
+        <div class="news-list">
+          
+          <article class="news-item">
+            <div class="news-item-img">
+              <img src="chatbots.png" alt="Chatbots de IA">
+            </div>
+            <div class="news-item-body">
+              <span class="tag">IA & Atendimento</span>
+              <h3>Como os chatbots de IA estão transformando o atendimento ao cliente</h3>
+              <p>Ferramentas com inteligência artificial ampliam a agilidade, a eficiência e a personalização no contato diário entre empresas e consumidores.</p>
+              <div class="news-item-meta">
+                <span>Por Redação</span> &bull; <span>3 min de leitura</span>
+              </div>
+              <button class="btn read-more-btn" 
+                      data-title="Transformação no Atendimento com Chatbots" 
+                      data-tag="IA & Atendimento" 
+                      data-content="A inteligência artificial está transformando o atendimento ao cliente no Brasil através do uso de chatbots modernos que combinam linguagem natural, aprendizado de máquina e automação para criar diálogos fluidos e personalizados.
+
+Os principais pontos destacados na reportagem publicitária sobre a evolução desse setor incluem aplicações práticas em áreas como saúde, onde sistemas inteligentes ajudam na triagem de pacientes, agendamento de consultas e envio de lembretes automáticos.
+
+Em Curitiba, a empresa EvaChat se destaca no gerenciamento de atendimentos automatizados via WhatsApp. A eficiência e a economia também ganham destaque, porque as ferramentas operam 24 horas por dia, respondem imediatamente e liberam as equipes humanas para tarefas mais estratégicas.
+
+Painéis integrados permitem acompanhar em tempo real o tempo médio de resposta, a taxa de resolução e a satisfação do consumidor, ajudando a corrigir falhas rapidamente. O futuro do setor aponta para agentes de IA capazes de executar tarefas complexas e atuar como suporte empático e estratégico para os profissionais humanos.">
+                Ler Reportagem Completa
+              </button>
+            </div>
+          </article>
+
+          <article class="news-item">
+            <div class="news-item-img">
+              <img src="emprego.png" alt="Empregos em Tecnologia">
+            </div>
+            <div class="news-item-body">
+              <span class="tag">Carreira & Mercado</span>
+              <h3>Empregos em tecnologia crescem mais fora do Sul e Sudeste; salários chegam a R$ 40,5 mil</h3>
+              <p>Norte, Nordeste e Centro-Oeste tiveram as maiores altas de contratações. Sudeste ainda concentra mais de 60% dos postos formais.</p>
+              <div class="news-item-meta">
+                <span>Por Mercado & Carreira</span> &bull; <span>4 min de leitura</span>
+              </div>
+              <button class="btn read-more-btn" 
+                      data-title="Empregos de Tecnologia Crescem Fora do Sul-Sudeste" 
+                      data-tag="Carreira & Mercado" 
+                      data-content="O mercado de trabalho em tecnologia (TIC) no Brasil está crescendo em ritmo acelerado fora das regiões Sul e Sudeste, embora o Sudeste ainda concentre a maior parte dos empregos formais (62,5%).
+
+Segundo dados da Brasscom divulgados em agosto de 2026, o país soma cerca de 943 mil trabalhadores CLT no setor. Entre 2023 e 2025, as maiores altas na criação de vagas ocorreram no Norte, Nordeste e Centro-Oeste, mostrando a expansão da transformação digital para além do eixo tradicional.
+
+O estado de São Paulo continua concentrando 44,7% dos postos da área, com salário médio de R$ 7.321. A função de Analista de Desenvolvimento de Sistemas lidera o mercado com 252.346 vagas formais e remuneração média de R$ 8.335,81, enquanto o cargo de Diretor de Serviços de Informática alcança a maior média salarial, em R$ 40.543,46.
+
+O avanço do setor fora do eixo sul-sudeste é impulsionado pela aceleração da digitalização e pela interiorização das oportunidades de trabalho, que ampliam acessos e democratizam a contratação de profissionais de TI.">
+                Ler Reportagem Completa
+              </button>
+            </div>
+          </article>
+
+          <article class="news-item">
+            <div class="news-item-img">
+              <img src="china.png" alt="Robótica na China">
+            </div>
+            <div class="news-item-body">
+              <span class="tag">Automação & Robótica</span>
+              <h3>O plano bilionário da China para fazer uma nova revolução industrial com milhões de robôs</h3>
+              <p>O governo chinês está investindo US$ 20 bilhões para liderar a inovação em robótica fabril e competir de forma direta com os EUA.</p>
+              <div class="news-item-meta">
+                <span>Por Mundo Tech</span> &bull; <span>5 min de leitura</span>
+              </div>
+              <button class="btn read-more-btn" 
+                      data-title="O Plano Bilionário da China para Robótica" 
+                      data-tag="Automação & Robótica" 
+                      data-content="A China anunciou um plano bilionário de US$ 20 bilhões para liderar a inovação global em robótica e competir diretamente com os Estados Unidos.
+
+O país já possui a maior força de trabalho automatizada do planeta, com mais de 2 milhões de robôs operando em suas fábricas. Além disso, responde por mais da metade dos robôs industriais produzidos no mundo.
+
+Entre os principais pontos destacados pela reportagem da BBC estão a motivação demográfica, com envelhecimento da população e redução da força de trabalho; os ganhos de eficiência em um ecossistema fabril ágil; e os desafios de integração com inteligência artificial. Há também preocupação com o impacto social e a necessidade de requalificação técnica para mitigar o desemprego.">
+                Ler Reportagem Completa
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Barra Lateral Informativa (Widgets) -->
+      <aside class="portal-sidebar">
+        <div class="widget-box">
+          <h4 class="widget-title">Mais Lidas</h4>
+          <ol class="most-read-list">
+            <li>
+              <span class="number">1</span>
+              <a href="#noticias">Salários em TI ultrapassam R$ 40 mil no Brasil</a>
+            </li>
+            <li>
+              <span class="number">2</span>
+              <a href="#inicio">Como os chatbots de IA otimizam empresas</a>
+            </li>
+            <li>
+              <span class="number">3</span>
+              <a href="#noticias">China investe US$ 20 bilhões na indústria robótica</a>
+            </li>
+            <li>
+              <span class="number">4</span>
+              <a href="#inicio">TypeScript 6.0: Veja o que mudou na linguagem</a>
+            </li>
+          </ol>
+        </div>
+
+        <div class="widget-box newsletter-box">
+          <h4 class="widget-title">Boletim Informativo</h4>
+          <p>Receba o resumo diário das principais notícias de tecnologia no seu e-mail.</p>
+          <form onsubmit="event.preventDefault(); alert('Inscrição realizada!');">
+            <input type="email" placeholder="Seu e-mail principal" class="widget-input" required>
+            <button class="btn btn-full" type="submit">Assinar Newsletter</button>
+          </form>
+        </div>
+      </aside>
+
+    </div>
+
+    <!-- Seção de Contato/Redação -->
+    <h2 class="section-title" id="programação">Programação</h2>
+    <section class="contact-section">
+      <p class="contact-subtitle">IA do Google apaga todo o armazenamento de programador por engano</p>
+      </p>
+       <p class="contact-subtitle">O agente de IA do Google Antigravity apagou todo o conteúdo de um drive de armazenamento por engano.</p>
+     
+      <form id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name">A principal promessa de um agente de inteligência artificial é executar tarefas complexas em nome do usuário. Mas, como mostra um caso compartilhado nesta semana, essa autonomia também pode representar riscos sérios. A IA integrada à IDE Antigravity, do Google, apagou todo o conteúdo do dispositivo de armazenamento de um desenvolvedor após interpretar incorretamente um comando simples.
+
+O incidente viralizou depois de ser documentado em um vídeo no YouTube e em uma publicação no Reddit. “O Google Antigravity acabou de deletar o conteúdo de todo o meu dispositivo de armazenamento”, relatou o programador, ainda surpreso com o estrago.</label>
+        </div>
+        <div class="form-group">
+          <h3>Os arquivos não foram recuperados</h3>
+        </div> 
+        <div class="form-group">
+          <label for="message">Segundo o relato, o desenvolvedor trabalhava em um app pessoal e pediu para que o agente limpasse o cache daquele projeto específico. Em vez disso, a IA executou um comando para limpar completamente o drive “D:”, apagando tudo em sequência — sem aviso prévio, sem confirmação e sem qualquer chance de reversão.
+
+O erro se agravou porque o agente utilizou a flag quiet, que elimina prompts de confirmação e ignora pastas de recuperação. O resultado foi devastador: todos os arquivos do armazenamento foram apagados instantaneamente.</label>
+        </div>
+      </form>
+    </section>
+    <h2 class="section-title" id="contato">Fale com a Redação</h2>
+    <section class="contact-section">
+      <p class="contact-subtitle">Dúvidas, sugestões de pauta ou parcerias comerciais? Envie uma mensagem para nossa equipe editorial.</p>
+      <form id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name">Nome completo</label>
+          <input type="text" id="name" placeholder="Digite seu nome" required>
+          <span class="error-msg" id="nameError">Por favor, insira seu nome.</span>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail de contato</label>
+          <input type="email" id="email" placeholder="nome@exemplo.com" required>
+          <span class="error-msg" id="emailError">Insira um e-mail válido.</span>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensagem / Sugestão de Pauta</label>
+          <textarea id="message" rows="4" placeholder="Escreva os detalhes aqui..." required></textarea>
+          <span class="error-msg" id="messageError">Escreva sua mensagem.</span>
+        </div>
+        <button type="submit" class="btn">Enviar Para a Redação</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Modal Interativo de Leitura Completa -->
+  <div class="modal-overlay" id="articleModal">
+    <div class="modal-container">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-body">
+        <span class="tag" id="modalTag">Categoria</span>
+        <h2 id="modalTitle" class="modal-article-title">Título da Notícia</h2>
+        <div class="modal-meta">Infotech &bull; Reportagem Especial</div>
+        <hr class="modal-divider">
+        <div id="modalContent"><p>Conteúdo completo da matéria...</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé Estilo Jornalístico -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="logo-main">Infotech</span>
+        <p>Jornalismo independente focado nas transformações tecnológicas no Brasil e no mundo.</p>
+      </div>
+      <div class="footer-credits">
+        <p>&copy; 2026 Infotech - Todos os direitos reservados.</p>
+        <p class="credits-authors">Corpo Editorial: Ana Flavia, Edson, Ícaro, Joyce, Kevin.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
