@@ -1,4 +1,12 @@
-// Alternância Modo Claro / Escuro
+// Atualização dinâmica da data no topo (Formato Editorial)
+const currentDateEl = document.getElementById('currentDate');
+if (currentDateEl) {
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const today = new Date();
+  currentDateEl.textContent = today.toLocaleDateString('pt-BR', options);
+}
+
+// Alternância de Tema Claro / Escuro
 const themeToggleBtn = document.getElementById('themeToggle');
 themeToggleBtn.addEventListener('click', () => {
   const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -7,12 +15,23 @@ themeToggleBtn.addEventListener('click', () => {
   themeToggleBtn.textContent = newTheme === 'dark' ? 'Modo Claro' : 'Modo Escuro';
 });
 
-// Modal para Notícia Completa
+// Modal para Leitura Completa de Notícias
 const modal = document.getElementById('articleModal');
 const modalTitle = document.getElementById('modalTitle');
 const modalTag = document.getElementById('modalTag');
 const modalContent = document.getElementById('modalContent');
 const modalClose = document.getElementById('modalClose');
+
+const renderModalContent = (content) => {
+  const paragraphs = String(content || '')
+    .split(/\n\s*\n/)
+    .map(paragraph => paragraph.trim())
+    .filter(Boolean);
+
+  modalContent.innerHTML = paragraphs.length
+    ? paragraphs.map(paragraph => `<p>${paragraph}</p>`).join('')
+    : '<p>Conteúdo indisponível no momento.</p>';
+};
 
 document.querySelectorAll('.read-more-btn').forEach(button => {
   button.addEventListener('click', () => {
@@ -22,7 +41,7 @@ document.querySelectorAll('.read-more-btn').forEach(button => {
 
     modalTitle.textContent = title;
     modalTag.textContent = tag;
-    modalContent.textContent = content;
+    renderModalContent(content);
 
     modal.classList.add('active');
   });
@@ -34,7 +53,7 @@ modal.addEventListener('click', (e) => {
   if (e.target === modal) closeModal();
 });
 
-// Validação do Formulário
+// Validação do Formulário de Contato da Redação
 const contactForm = document.getElementById('contactForm');
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -69,7 +88,7 @@ contactForm.addEventListener('submit', (e) => {
   }
 
   if (isValid) {
-    alert('Mensagem enviada com sucesso!');
+    alert('Mensagem enviada com sucesso para a redação do TechPulse!');
     contactForm.reset();
   }
 });
